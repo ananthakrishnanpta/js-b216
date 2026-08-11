@@ -3,23 +3,36 @@
     margin: 0px;
     box-sizing: border-box;
 }
+body {
+    min-height: 100vh;
+}
+.bg-dark { 
+    color: white;
+    background: no-repeat linear-gradient(rgb(45, 45, 45), black);
+}
 
 #grid-play > .square-grid {
-    height: 300px;
+    margin: auto;
+    margin-top: 15vh;
+    height: 70vh;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     gap: 20px;
     padding: 20px;
+    background: linear-gradient(rgb(35, 35, 147),  rgb(255, 69, 69) );
 }
 .square-grid > .square {
     position: relative;
+    
 }
 .border {
         border: 1px solid;
 }
 .square  {
     aspect-ratio: 1/1;
+    border-radius: 5px;
+    background-color: white;
 }
 .circle {
     aspect-ratio: 1/1;
@@ -29,6 +42,11 @@
 .square > .circle {
     height: 40%;
     position: absolute;
+    transition-duration: 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
 }
 
 .square:nth-child(odd) > .circle { 
@@ -40,4 +58,37 @@
 }
 .square:nth-last-child(-n + 2) > .circle {
     top: 0;
+}
+
+
+/* Curved borders for squares */
+.square-grid > .square:nth-child(1) {
+    border-bottom-right-radius: 24px;
+}
+.square-grid > .square:nth-child(2) {
+    border-bottom-left-radius: 24px;
+}
+.square-grid > .square:nth-child(3) {
+    border-top-right-radius: 24px;
+}
+.square-grid > .square:nth-child(4) {
+    border-top-left-radius: 24px;
+}
+
+
+.square:nth-child(1) > .circle {
+    animation: circle-go-round-1 4s linear infinite;
+}
+
+
+.square:nth-child(2) > .circle {
+    animation: circle-go-round-2 6s linear infinite;
+}
+
+.square:nth-child(3) > .circle {
+    animation: circle-go-round-3 8s linear infinite;
+}
+
+.square:nth-child(4) > .circle {
+    animation: circle-go-round-4 10s linear infinite;
 }

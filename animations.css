@@ -1,0 +1,132 @@
+
+@keyframes circle-go-round-1 {
+    0% {
+        right: 0;
+        bottom: 0;
+        background-color: yellow;
+    }
+    25%{
+        right: 50%;
+        bottom: 20%;
+        background-color: green;
+    }
+    50%{
+        right: 70%;
+        bottom: 70%;
+        background-color: blue;
+        transform: scale(0.5);
+    }
+    75%{
+        right: 20%;
+        bottom: 50%;
+        background-color: rgb(221, 69, 13);
+    }
+}
+@keyframes circle-go-round-2 {
+    0% {
+        left: 0;
+        bottom: 0;
+        background-color: yellow;
+        transform: scale(1);
+    }
+
+    25% {
+        left: 50%;
+        bottom: 20%;
+        background-color: green;
+        transform: scale(1);
+    }
+
+    50% {
+        left: 70%;
+        bottom: 70%;
+        background-color: blue;
+        transform: scale(0.5);
+    }
+
+    75% {
+        left: 20%;
+        bottom: 50%;
+        background-color: rgb(221, 69, 13);
+        transform: scale(1);
+    }
+
+    100% {
+        left: 0;
+        bottom: 0;
+        background-color: yellow;
+        transform: scale(1);
+    }
+}
+@keyframes circle-go-round-3 {
+    0% {
+        right: 0;
+        top: 0;
+        background-color: yellow;
+        transform: scale(1);
+    }
+
+    25% {
+        right: 50%;
+        top: 20%;
+        background-color: green;
+        transform: scale(1);
+    }
+
+    50% {
+        right: 70%;
+        top: 70%;
+        background-color: blue;
+        transform: scale(0.5);
+    }
+
+    75% {
+        right: 20%;
+        top: 50%;
+        background-color: rgb(221, 69, 13);
+        transform: scale(1);
+    }
+
+    100% {
+        right: 0;
+        top: 0;
+        background-color: yellow;
+        transform: scale(1);
+    }
+}
+@keyframes circle-go-round-4 {
+    0% {
+        left: 0;
+        top: 0;
+        background-color: yellow;
+        transform: scale(1);
+    }
+
+    25% {
+        left: 50%;
+        top: 20%;
+        background-color: green;
+        transform: scale(1);
+    }
+
+    50% {
+        left: 70%;
+        top: 70%;
+        background-color: blue;
+        transform: scale(0.5);
+    }
+
+    75% {
+        left: 20%;
+        top: 50%;
+        background-color: rgb(221, 69, 13);
+        transform: scale(1);
+    }
+
+    100% {
+        left: 0;
+        top: 0;
+        background-color: yellow;
+        transform: scale(1);
+    }
+}
