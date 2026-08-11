@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#grid-play > .square-grid {
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+}
+.square-grid > .square {
+    position: relative;
+}
+.border {
+        border: 1px solid;
+}
+.square  {
+    aspect-ratio: 1/1;
+}
+.circle {
+    aspect-ratio: 1/1;
+    border-radius: 50%
+}
+
+.square > .circle {
+    height: 40%;
+    position: absolute;
+}
+
+.square:nth-child(odd) > .circle { 
+    right: 0;
+}
+
+.square:nth-child(-n + 2)  > .circle {
+    bottom: 0;
+}
+.square:nth-last-child(-n + 2) > .circle {
+    top: 0;
+}
