@@ -67,30 +67,167 @@
             // 8. NaN
 
         // v. switch - matching one variable against multiple fixed values
-        let menu = `
-        Welcome
-        1. Balance
-        2. Data
-        3. Recharge
-        0. Exit
-        `
-        let choice = prompt(menu);
-        let balance = 20;
-        let data_balance = 200;
-        choice = Number(choice);
-        switch (choice){
-            case 1:
-                console.log(`You have Rs.${balance} in your talktime.`);
-                break;
-            case 2:
-                console.log(`You have ${data_balance}MB left.`);
-                break;
-            case 3:
-                console.log(`Please go to the nearest store.`);
-                break;
-            case 0:
-                console.log("Thank you for visiting us.\nBye");
-                break;
-            default:
-                console.log(`Check your input. You typed : ${choice}.`)
-        }
+        // let menu = `
+        // Welcome
+        // 1. Balance
+        // 2. Data
+        // 3. Recharge
+        // 0. Exit
+        // `
+        // let choice = prompt(menu);
+        // let balance = 20;
+        // let data_balance = 200;
+        // choice = Number(choice);
+        // switch (choice){
+        //     case 1:
+        //         console.log(`You have Rs.${balance} in your talktime.`);
+        //         break;
+        //     case 2:
+        //         console.log(`You have ${data_balance}MB left.`);
+        //         break;
+        //     case 3:
+        //         console.log(`Please go to the nearest store.`);
+        //         break;
+        //     case 0:
+        //         console.log("Thank you for visiting us.\nBye");
+        //         break;
+        //     default:
+        //         console.log(`Check your input. You typed : ${choice}.`)
+        // }
+
+// 2. Loops - Repeated Execution of Code block
+
+// for loop
+
+// for (expr1; expr2; expr3){
+//     // code block;
+// }
+
+// expr1 :> Executes once before first iteration
+        // - Usually used for counter variable initialization
+// expr2 :> Evaluated before started each iteration
+        // - Usually used for checking termination condition
+// expr3 :> Executed after each iteration.
+        // - Usually used for increment/decrement on counter variable
+
+// printing 1 - 5
+
+    // for (let i = 1; i <= 5; i++){
+    //     console.log(i);
+    // }
+
+    // for (let i = 1; i <= 5;){
+    //     console.log(i++);
+    // }
+
+    // for (let i = 1; ;){
+    //     console.log(i++);
+
+    //     if (i > 5){
+    //         break;
+    //     }
+    // }
+
+    // // *
+    // // * *
+    // // * * *
+    // // * * * *
+    // // * * * * *
+    // for (let i = 1; i <= 5; i++){
+    //     row = "";
+    //     for (let j = 1; j <= i; j++){
+    //         row += "* ";
+    //     }
+    //     console.log(row);
+    // }
+
+    // for (let i = 1; i <= 5; i++){
+    //     console.log(`* `.repeat(i));
+    // }
+
+    // //          *
+    // //        * *
+    // //      * * *
+    // //    * * * *
+    // //  * * * * *
+
+    // for (let i = 1; i <= 5; i++){
+    //     console.log('  '.repeat(5 - i) + `* `.repeat(i));
+    // }
+
+    // //     * 
+    // //    * *
+    // //   * * * 
+    // //  * * * *
+    // // * * * * * 
+    // //  * * * * 
+    // //   * * * 
+    // //    * * 
+    // //     * 
+
+    // for (let row = 1; row < 10; row++){
+    //     if (row < 5){
+    //         console.log(" ".repeat(5-row) + "* ".repeat(row));
+    //     } else {
+    //         console.log(" ".repeat(row-5) + "* ".repeat(10-row));
+    //     }
+    // }
+
+
+
+// const students = [
+//     'abhay',
+//     'sujay',
+//     'vijay'
+// ]
+
+// students.push("siraj");
+
+
+// // print all students with serial numbers alongside.
+
+// for (let i = 0; i < students.length; i++){
+//     console.log(`${i + 1} - ${students[i]}`);
+// }
+
+// for (let student of students){
+//     console.log(student);
+// }
+
+// for (let [student_index, student] of students.entries()){
+//     console.log(`${student_index + 1} - ${student}`);
+// }
+
+// for (let student_index in students){
+//     console.log(`${parseInt(student_index) + 1} - ${students[student_index]}`);
+// }
+
+// while loop
+
+    // while (truth_value){
+    //     // code block 
+    // }
+
+// print 1 to 10
+
+let i = 1;
+while (i <= 10){
+    console.log(i++);
+}
+
+let students = [
+    'akash',
+    'prakash',
+    'prabhas'
+]
+
+while(students.length != 0){
+    console.log(students.pop());
+}
+
+// do while loop
+
+    // do {
+    //     // code block 
+    // }
+    // while (truth_value)
