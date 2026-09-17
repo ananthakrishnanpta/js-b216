@@ -210,20 +210,20 @@
 
 // print 1 to 10
 
-let i = 1;
-while (i <= 10){
-    console.log(i++);
-}
+// let i = 1;
+// while (i <= 10){
+//     console.log(i++);
+// }
 
-let students = [
-    'akash',
-    'prakash',
-    'prabhas'
-]
+// let students = [
+//     'akash',
+//     'prakash',
+//     'prabhas'
+// ]
 
-while(students.length != 0){
-    console.log(students.pop());
-}
+// while(students.length != 0){
+//     console.log(students.pop());
+// }
 
 // do while loop
 
@@ -231,3 +231,83 @@ while(students.length != 0){
     //     // code block 
     // }
     // while (truth_value)
+
+
+// find factorial
+
+// let's find the factorial of 5
+
+// let [fact, n] = [1, '5'];
+// console.log(typeof n);
+// while(n > 1){
+//     fact *= n--; // fact = fact * n; n = n - 1;
+// }
+// console.log(typeof n);
+// console.log(fact);
+
+
+// let a1 = [1,2,3];
+// let a2 = [4,5,6];
+
+// let c = [...a1, ...a2];
+
+// console.log(c);
+
+// let [a, b, ...rest] = c;
+// console.log(rest);
+
+
+// fibonacci series
+    // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
+
+    // fib(n) = fib(n - 1) + fib(n - 2);
+
+    // let n = 5;
+    // let [first, second]  = [0, 1];
+    // var result;
+    // for(let count = 0;  count < 5; count++){
+    //     // console.log(first);
+    //     result = first;
+    //     let next = first + second;
+
+    //     first = second;
+    //     second = next;
+    // }
+
+    // console.log(result);
+
+
+// ---
+
+// 3. Exception Handling : Execution of risky code block expecting exceptions
+
+function withdrawMoney(balance, amount){
+
+    try {
+        // Risky code block
+        if(amount <= 0) {
+            throw new Error("Amount must be greater than zero.");
+        }
+
+        if (amount > balance){
+            throw new Error("Insufficient Balance.");
+        }
+
+        balance -= amount;
+        console.log(`Your withdrawal of Rs.${amount} was successful.
+            Balance is Rs.${balance}`);
+    }
+    catch (err) {
+        // error handling
+        console.log(`Transaction Failed!
+            ${err}`);
+    }
+    finally{
+        // clean-up
+        console.log("Thank you!!!")
+    }
+}
+withdrawMoney(balance=2000, amount = 3000);
+
+
+
