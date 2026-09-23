@@ -2,18 +2,18 @@
 
 // 1. Regular function : 
 
-    // function <functionName>(parameter1, parameter2){
-    //     // Logic
-    //     return <return value>
-    // }
+// function <functionName>(parameter1, parameter2){
+//     // Logic
+//     return <return value>
+// }
 
-    // fibonacci number in function
+// fibonacci number in function
 
 // function fib(n){
 //     if (n == 1){
 //         return 0;
 //     } 
-    
+
 //     if (n == 2){
 //         return 1;
 //     }
@@ -34,13 +34,13 @@
 //     return x + y;
 // }
 
-    // sayHello();
-    // // Here we are able to call the function before definition 
-    // because of function hoisting
+// sayHello();
+// // Here we are able to call the function before definition 
+// because of function hoisting
 
-    // function sayHello(){
-    //     console.log("Hello");
-    // }
+// function sayHello(){
+//     console.log("Hello");
+// }
 
 // function sayHello(name){
 //     console.log(`Hello, ${name}!`);
@@ -53,74 +53,101 @@
 // sayHello("Akash","male");
 
 
-const teacher_data = {
-    name : "Arun",
-    students : [
-        {
-            id : 1,
-            name : "Kiran",
-            present : true,
-        },
-        {
-            id : 2,
-            name : "Vimal",
-            present : false
-        },
-        {
-            id : 3,
-            name : "Tarun",
-            present : true
-        },
-        {
-            id : 4,
-            name : "Reshmi",
-            present : true
-        }
-    ]
-}
-function capitalize(string){
-    return `${string[0].toUpperCase()}${string.slice(1,string.length)}`;
-}
+// const teacher_data = {
+//     name : "Arun",
+//     students : [
+//         {
+//             id : 1,
+//             name : "Kiran",
+//             present : true,
+//         },
+//         {
+//             id : 2,
+//             name : "Vimal",
+//             present : false
+//         },
+//         {
+//             id : 3,
+//             name : "Tarun",
+//             present : true
+//         },
+//         {
+//             id : 4,
+//             name : "Reshmi",
+//             present : true
+//         }
+//     ]
+// }
+// function capitalize(string){
+//     return `${string[0].toUpperCase()}${string.slice(1,string.length)}`;
+// }
 
-function sayHello(data){
-    let teacher = data.name;
-    let students = data.students.filter((student) => student.present);
-    data.students.forEach((student) => student.name = capitalize(student.name));
+// function sayHello(data){
+//     let teacher = data.name;
+//     let students = data.students.filter((student) => student.present);
+//     data.students.forEach((student) => student.name = capitalize(student.name));
 
-    let message = `Hi ${teacher}, the following students are waiting for you : `;
-    for(let [index, student] of students.entries()){
-        if(index == students.length - 1){
-            message += `and ${student.name}.`;
-        } else {
-            message += `${student.name}, `;
-        }
+//     let message = `Hi ${teacher}, the following students are waiting for you : `;
+//     for(let [index, student] of students.entries()){
+//         if(index == students.length - 1){
+//             message += `and ${student.name}.`;
+//         } else {
+//             message += `${student.name}, `;
+//         }
+//     }
+
+//     console.log(message);
+// }
+
+// // sayHello(teacher_data);
+
+// function raceCars([first, second, third, ...others]){
+//     let message = `
+//     The race was a thrilling experience with 
+//         ${first} finishing first, 
+//         ${second} in second position, 
+//         ${third} in third position,`;
+
+//     if(others.length > 0){message += `\n followed by \n`};
+
+//     for(let [index, car] of others.entries()){
+//         if(index == others.length - 1){
+//             message += `and then ${car} finishing last.`;
+//         } else {
+//             message += `${car}, `;
+//         }
+//     }
+//     console.log(message);
+// }
+
+// let winners = ['Lotus', 'BMW', "Mercedes"]
+// let runner_ups = ["Mistubushi", "Nissan", "Honda"]
+
+// raceCars([...winners, ...runner_ups]);
+
+
+// Check for palindrome number 
+
+function reverseNum(num) {
+    let last_digit, reverse = 0;
+    while (num > 0) {
+        last_digit = num % 10;
+        reverse = (reverse * 10) + last_digit;
+        num = Math.floor(num / 10);
     }
-
-    console.log(message);
+    return reverse;
+}
+function isPalindrome(num) {
+    return num === reverseNum(num);
 }
 
-// sayHello(teacher_data);
+console.log(isPalindrome(12321));
 
-function raceCars([first, second, third, ...others]){
-    let message = `
-    The race was a thrilling experience with 
-        ${first} finishing first, 
-        ${second} in second position, 
-        ${third} in third position,`;
+// Default Parameters in function
 
-    if(others.length > 0){message += `\n followed by \n`};
-    
-    for(let [index, car] of others.entries()){
-        if(index == others.length - 1){
-            message += `and then ${car} finishing last.`;
-        } else {
-            message += `${car}, `;
-        }
-    }
-    console.log(message);
-}
+// function sum(a, b = 10){
+//     return a + b;
+// }
 
-let winners = ['Lotus', 'BMW', "Mercedes"]
-let runner_ups = ["Mistubushi", "Nissan", "Honda"]
+// console.log(sum(5));
 
-raceCars([...winners, ...runner_ups]);
