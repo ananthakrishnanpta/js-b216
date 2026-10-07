@@ -41,8 +41,31 @@ class Member{
     }
 }
 
-const m1 = new Member();
-m1.displayInfo();
+// const m1 = new Member();
+// m1.displayInfo();
 
-const m2 = new Member(1234, "Molli", "molli@gmail.com");
-m2.displayInfo();
+// const m2 = new Member(1234, "Molli", "molli@gmail.com");
+// m2.displayInfo();
+
+class Student extends Member{
+    constructor(id, name, email){
+        super(id, name, email); // calling the parent class constructor
+        this.marks = 0;
+    }
+    displayInfo(){
+        console.log(`Student info : ID : ${this.id}`);
+        super.displayInfo();
+        console.log(`Marks\t:\t${this.marks}`);
+    }
+    checkMarks(){
+        console.log(`Dear ${this.name}, you have ${this.marks} ${this.marks == 1 ? 'mark' : 'mark'}.`)
+    }
+}
+
+const s1 = new Student(1242, "Ragul", "ragul@gmail.com");
+s1.marks = 1;
+s1.displayInfo();
+// s1.checkMarks();
+// console.log(Member.memberCount);
+
+
